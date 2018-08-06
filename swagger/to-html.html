@@ -1,0 +1,5896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>90api | swagger - to HTML </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"swagger - to HTML","path":"swagger/to-html.html"},"data":{"navigation":{"logo":{"text":"90api","type":"link","path":"index.html"},"main":[{"text":"gank.io","type":"link","path":"gank.html"},{"text":"玩Android","type":"link","path":"wanandroid.html"},{"text":"V2EX","type":"link","path":"v2ex.html"}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"doc","theme_config":{"swagger_ui":{"version":3,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot=""><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"/><span class="doc-navbar__logo__text">90api</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="Swagger-to-HTML"><a href="#Swagger-to-HTML" class="headerlink" title="Swagger to HTML"></a>Swagger to HTML</h1><div class="doc-swagger-to-html">
+                <div class="download-btn" data-download-route="/2dd0218bc1de0903d54ac234d678d199/gank.json">
+                  <a class="download-btn__link" href="/2dd0218bc1de0903d54ac234d678d199/gank.json" target="_blank" download="">Download Schema</a>
+                </div>
+                <div class="head">
+  <div class="head__title">
+    <h1 class="head__title__text">
+      Swagger store
+    </h1>
+    <div class="head__title__version">
+        Version: 1.0.0
+    </div>
+  </div>
+  <div class="head__description">
+    This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.
+  </div>
+</div>
+
+  <div class="security">
+    <h2 id="security__title"> Security Definitions</h2>
+    <div class="security__definitions">
+      
+        <div class="security_definition">
+  <h3 class="security_definition__name">
+      petstore_auth
+  </h3>
+  
+  
+    <div class="security_definition__info">
+      The type of security scheme is <code class="inline-code">oauth2</code>.
+    </div>
+  
+  
+  
+    <div class="security_definition__info">
+      The flow used by the OAuth2 security scheme is <code class="inline-code"> implicit</code>.
+    </div>
+  
+  
+    <div class="security_definition__info">
+      The authorization URL to be used for this flow is <code class="inline-code">http://petstore.swagger.io/oauth/dialog</code>.
+    </div>
+  
+  
+  
+    <div class="security_definition__scopes">
+      The available scopes for the OAuth2 security scheme are as follows.
+      <div class="security_definition__scopes__scope">
+        
+          <div>
+            <code class="inline-code">write:pets</code>: modify pets in your account
+          </div>
+        
+          <div>
+            <code class="inline-code">read:pets</code>: read your pets
+          </div>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+        <div class="security_definition">
+  <h3 class="security_definition__name">
+      api_key
+  </h3>
+  
+  
+    <div class="security_definition__info">
+      The type of security scheme is <code class="inline-code">apiKey</code>.
+    </div>
+  
+  
+    <div class="security_definition__info">
+      The name of the <code class="inline-code">header</code> to be used is <code class="inline-code">api_key</code>.
+    </div>
+  
+  
+  
+  
+  
+</div>
+
+      
+    </div>
+  </div>
+
+<div class="body">
+  <div class="definitions">
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Add-a-new-pet-to-the-store" class="operation-info__title">Add a new pet to the store</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /pet
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+      <div class="reference-card__content__example">
+        Eg. doggie
+      </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        pet status in the store
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">available</code>, <code class="inline-code">pending</code>, <code class="inline-code">sold</code>.
+      </div>
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/pet</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>405</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid input
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Update-an-existing-pet" class="operation-info__title">Update an existing pet</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--put">
+        PUT
+      </div>
+      <div class="operation-info__verb__path">
+        /pet
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+      <div class="reference-card__content__example">
+        Eg. doggie
+      </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        pet status in the store
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">available</code>, <code class="inline-code">pending</code>, <code class="inline-code">sold</code>.
+      </div>
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X PUT https://petstore.swagger.io/v2/pet</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid ID supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Pet not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>405</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Validation exception
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Finds-Pets-by-status" class="operation-info__title">Finds Pets by status</h2>
+
+    <div class="operation-info__description">Multiple status values can be provided with comma separated strings</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/findByStatus
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          status
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            array 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in query
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          Status values that need to be considered for filter
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/pet/findByStatus</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        []
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category.id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category.name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+      <div class="reference-card__content__example">
+        Eg. doggie
+      </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].photoUrls
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].photoUrls[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        pet status in the store
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">available</code>, <code class="inline-code">pending</code>, <code class="inline-code">sold</code>.
+      </div>
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid status value
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Finds-Pets-by-tags" class="operation-info__title">Finds Pets by tags</h2>
+
+    <div class="operation-info__description">Muliple tags can be provided with comma separated strings. Use         tag1, tag2, tag3 for testing.</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/findByTags
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          tags
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            array 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in query
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          Tags to filter by
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/pet/findByTags</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        []
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category.id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].category.name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+      <div class="reference-card__content__example">
+        Eg. doggie
+      </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].photoUrls
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].photoUrls[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].tags[].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        pet status in the store
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">available</code>, <code class="inline-code">pending</code>, <code class="inline-code">sold</code>.
+      </div>
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid tag value
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Find-pet-by-ID" class="operation-info__title">Find pet by ID</h2>
+
+    <div class="operation-info__description">Returns a single pet</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/{petId}
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          petId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          ID of pet to return
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/pet/{petId}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        category.name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+      <div class="reference-card__content__example">
+        Eg. doggie
+      </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+        <div class="reference-card__content__info__required">
+          required
+        </div>
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        photoUrls[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          array 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[]
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        tags[].name
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        pet status in the store
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">available</code>, <code class="inline-code">pending</code>, <code class="inline-code">sold</code>.
+      </div>
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid ID supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Pet not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Updates-a-pet-in-the-store-with-form-data" class="operation-info__title">Updates a pet in the store with form data</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/{petId}
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          petId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          ID of pet that needs to be updated
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        name
+      </div>
+      <div class="reference-card__content__info__type">
+        string 
+      </div>
+      
+    </div>
+    <div class="reference-card__content__usage">
+      Used in formData
+    </div>
+    <div class="reference-card__content__description">
+      Updated name of the pet
+    </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      <div class="reference-card__content__info__type">
+        string 
+      </div>
+      
+    </div>
+    <div class="reference-card__content__usage">
+      Used in formData
+    </div>
+    <div class="reference-card__content__description">
+      Updated status of the pet
+    </div>
+    
+  </div>
+
+
+  
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/pet/{petId}  \</span><br><span class="line">-F <span class="string">"name: undefined"</span>  \</span><br><span class="line">-F <span class="string">"status: undefined"</span></span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>405</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid input
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Deletes-a-pet" class="operation-info__title">Deletes a pet</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--delete">
+        DELETE
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/{petId}
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Header
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          api_key
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+      </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          petId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          Pet id to delete
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X DELETE https://petstore.swagger.io/v2/pet/{petId}  \</span><br><span class="line">-H <span class="string">"api_key: undefined"</span></span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid ID supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Pet not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="uploads-an-image" class="operation-info__title">uploads an image</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /pet/{petId}/uploadImage
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+      <code class="inline-code">write:pets</code> and <code class="inline-code">read:pets</code> scopes are required for <code class="inline-code">petstore_auth</code>.
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          petId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          ID of pet to update
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        additionalMetadata
+      </div>
+      <div class="reference-card__content__info__type">
+        string 
+      </div>
+      
+    </div>
+    <div class="reference-card__content__usage">
+      Used in formData
+    </div>
+    <div class="reference-card__content__description">
+      Additional data to pass to server
+    </div>
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        file
+      </div>
+      <div class="reference-card__content__info__type">
+        file 
+      </div>
+      
+    </div>
+    <div class="reference-card__content__usage">
+      Used in formData
+    </div>
+    <div class="reference-card__content__description">
+      file to upload
+    </div>
+    
+  </div>
+
+
+  
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/pet/{petId}/uploadImage  \</span><br><span class="line">-F <span class="string">"additionalMetadata: undefined"</span>  \</span><br><span class="line">-F <span class="string">"file: undefined"</span></span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        code
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        type
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        message
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Returns-pet-inventories-by-status" class="operation-info__title">Returns pet inventories by status</h2>
+
+    <div class="operation-info__description">Returns a map of status codes to quantities</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /store/inventory
+      </div>
+    </div>
+  </div>
+  
+    <h3> Security Requirement </h3>
+    
+  <div class="security-requirement">
+    
+  </div>
+
+
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/store/inventory</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Place-an-order-for-a-pet" class="operation-info__title">Place an order for a pet</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /store/order
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        petId
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        quantity
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        shipDate
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string  (date-time) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        Order Status
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">placed</code>, <code class="inline-code">approved</code>, <code class="inline-code">delivered</code>.
+      </div>
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        complete
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          boolean 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/store/order</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        petId
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        quantity
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        shipDate
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string  (date-time) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        Order Status
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">placed</code>, <code class="inline-code">approved</code>, <code class="inline-code">delivered</code>.
+      </div>
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        complete
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          boolean 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid Order
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Find-purchase-order-by-ID" class="operation-info__title">Find purchase order by ID</h2>
+
+    <div class="operation-info__description">For valid response try integer IDs with value &gt;= 1 and &lt;= 10.         Other values will generated exceptions</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /store/order/{orderId}
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          orderId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          ID of pet that needs to be fetched
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/store/order/{orderId}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        petId
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        quantity
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        shipDate
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string  (date-time) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        status
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          enum 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        Order Status
+      </div>
+    
+    
+      <div class="reference-card__content__values">
+        Allowed values: <code class="inline-code">placed</code>, <code class="inline-code">approved</code>, <code class="inline-code">delivered</code>.
+      </div>
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        complete
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          boolean 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid ID supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Order not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Delete-purchase-order-by-ID" class="operation-info__title">Delete purchase order by ID</h2>
+
+    <div class="operation-info__description">For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--delete">
+        DELETE
+      </div>
+      <div class="operation-info__verb__path">
+        /store/order/{orderId}
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          orderId
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            integer  (int64) 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          ID of the order that needs to be deleted
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X DELETE https://petstore.swagger.io/v2/store/order/{orderId}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid ID supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Order not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Create-user" class="operation-info__title">Create user</h2>
+
+    <div class="operation-info__description">This can only be done by the logged in user.</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /user
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        username
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        firstName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        lastName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        email
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        password
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        phone
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        userStatus
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        User Status
+      </div>
+    
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/user</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      This is a default response for the request.
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Creates-list-of-users-with-given-input-array" class="operation-info__title">Creates list of users with given input array</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /user/createWithArray
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        []
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].username
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].firstName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].lastName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].email
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].password
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].phone
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].userStatus
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        User Status
+      </div>
+    
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/user/createWithArray</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      This is a default response for the request.
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Creates-list-of-users-with-given-input-array" class="operation-info__title">Creates list of users with given input array</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--post">
+        POST
+      </div>
+      <div class="operation-info__verb__path">
+        /user/createWithList
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        []
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          object 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].username
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].firstName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].lastName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].email
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].password
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].phone
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        [].userStatus
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        User Status
+      </div>
+    
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X POST https://petstore.swagger.io/v2/user/createWithList</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      This is a default response for the request.
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Logs-user-into-the-system" class="operation-info__title">Logs user into the system</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /user/login
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          username
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in query
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          The user name for login
+        </div>
+      
+      
+    </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          password
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in query
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          The password for login in clear text
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/user/login</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid username/password supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Logs-out-current-logged-in-user-session" class="operation-info__title">Logs out current logged in user session</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /user/logout
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/user/<span class="built_in">logout</span></span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      This is a default response for the request.
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Get-user-by-user-name" class="operation-info__title">Get user by user name</h2>
+
+    <div class="operation-info__description"></div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--get">
+        GET
+      </div>
+      <div class="operation-info__verb__path">
+        /user/{username}
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          username
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          The name that needs to be fetched. Use user1 for testing. 
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X GET https://petstore.swagger.io/v2/user/{username}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>200</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      successful operation
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        username
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        firstName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        lastName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        email
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        password
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        phone
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        userStatus
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        User Status
+      </div>
+    
+    
+    
+  </div>
+
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid username supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      User not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Updated-user" class="operation-info__title">Updated user</h2>
+
+    <div class="operation-info__description">This can only be done by the logged in user.</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--put">
+        PUT
+      </div>
+      <div class="operation-info__verb__path">
+        /user/{username}
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          username
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          name that need to be updated
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Request Body
+  </div>
+  
+  
+    
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        id
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int64) 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        username
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        firstName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        lastName
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        email
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        password
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        phone
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          string 
+        </div>
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+  <div class="reference-card__content ">
+    <div class="reference-card__content__info">
+      <div class="reference-card__content__info__name">
+        userStatus
+      </div>
+      
+        <div class="reference-card__content__info__type">
+          integer  (int32) 
+        </div>
+      
+      
+    </div>
+    
+      <div class="reference-card__content__description">
+        User Status
+      </div>
+    
+    
+    
+  </div>
+
+
+
+
+  
+</div>
+
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X PUT https://petstore.swagger.io/v2/user/{username}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid user supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      User not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+      <div class="operation">
+  <div class="operation-info">
+    <h2 id="Delete-user" class="operation-info__title">Delete user</h2>
+
+    <div class="operation-info__description">This can only be done by the logged in user.</div>
+
+    <div class="operation-info__verb">
+      <div class="operation-info__verb__name operation-info__verb__name--delete">
+        DELETE
+      </div>
+      <div class="operation-info__verb__path">
+        /user/{username}
+      </div>
+    </div>
+  </div>
+  
+  <div class="request">
+  <div class="request__title">
+    <div class="request__title__reference">
+      <h3>Request</h3>
+    </div>
+    <div class="request__title__sample">
+      <h3>Sample Request</h3>
+    </div>
+  </div>
+  <table class="request__content">
+    <tr>
+      <td class="request__content__reference">
+        <div class="reference">
+
+          
+
+          
+            <div class="reference-card">
+  <div class="reference-card__title">
+    Path
+  </div>
+  
+    <div class="reference-card__content ">
+      <div class="reference-card__content__info">
+        <div class="reference-card__content__info__name">
+          username
+        </div>
+        
+          <div class="reference-card__content__info__type">
+            string 
+          </div>
+        
+        
+          <div class="reference-card__content__info__required">
+            required
+          </div>
+        
+      </div>
+      
+        <div class="reference-card__content__usage">
+          Used in path
+        </div>
+      
+      
+        <div class="reference-card__content__description">
+          The name that needs to be deleted
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+          
+
+          
+
+        </div>
+      </td>
+      <td class="request__content__sample">
+        
+  <div class="sample-snippet">
+    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v -X DELETE https://petstore.swagger.io/v2/user/{username}</span><br></pre></td></tr></table></figure>
+    <button class="dc-btn sample-snippet__copy-btn dc-btn--small" data-dc-has-tooltip="Copied!">Copy Request</button>
+  </div>
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div class="response">
+  <div class="response__title">
+    <div class="response__title__reference">
+      <h3>Response</h3>
+    </div>
+    <div class="response__title__sample">
+      <h3>Sample Response</h3>
+    </div>
+  </div>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>400</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      Invalid username supplied
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+    <table class="response__content">
+      <tr>
+        <td class="response__content__reference">
+          <div class="reference">
+
+  <div class="reference__response-code">
+    
+      Status Code: <code>404</code>
+    
+  </div>
+
+  
+    <div class="reference__description">
+      User not found
+    </div>
+  
+
+  <div class="reference-card">
+    <div class="reference-card__title">
+      Reference
+    </div>
+    
+      
+
+    
+  </div>
+
+</div>
+
+        </td>
+        <td class="response__content__sample">
+          
+
+        </td>
+      </tr>
+    </table>
+  
+</div>
+
+</div>
+
+    
+  </div>
+</div>
+
+              </div>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>
